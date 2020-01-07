@@ -1,0 +1,21 @@
+version: "3"
+services:
+  redis:
+    container_name: cache
+    build: ./redis
+    ports:
+      - "6379:6379"
+  app:
+    container_name: app
+    restart: always
+    build: ./node_app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    env_file:
+      node.env
+    # volumes:
+    #   - "./node_app:/usr/src/app"
+    # working_dir:
+    #   /usr/src/app

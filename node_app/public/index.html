@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="./javascripts/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    <link href="./stylesheets/tagify.css" rel="stylesheet" />
+    <link href="./stylesheets/loader.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="logo"><a href="JavaScript: location.reload(true);"><img src="images/logo.png"></img></a></div>
+    
+    <div class="note" id="content">
+        Upload one or more PDF or image files. </br> </br>
+        We will mail you a link to download a searchable version of your files.
+    </div>
+
+    <div class="temporary" id="temporary">
+
+        <div class="note">
+
+            Type in one or more languages: <br />
+            <textarea id="languagetextarea"></textarea>
+
+        </div>
+
+        <form onsubmit="handleFiles();return false" method="post" name="myForm">
+
+            <div class="note">
+
+                Inform your email: <i>*</i> <br />
+                <input type="text" id="user-email" required />
+
+            </div>
+
+            <div id="drop-area">
+
+                <input type="file" id="fileElem" onchange="updateList();" multiple> <br />
+                <label class="button" for="fileElem">Upload files </label> ( or drag and drop them into this box )
+            </div>
+            <div id="file-list">
+
+            </div>
+            <!-- <div class="note">File size limit: 50MB</div> -->
+            <div class="submission">
+
+                <button type="submit" class="button" name="submit">Submit</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="showbox" id="showbox"></div>
+
+    <script src="./javascripts/tagify.js"></script>
+    <script src="./javascripts/languages.js"></script>
+</body>
+
+</html>
