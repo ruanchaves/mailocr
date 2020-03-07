@@ -10,10 +10,6 @@ I wrote it after searching for OCR tools online and finding out that most of the
 
 Under the hood, it's a graphical user interface for the [Tesseract 4.0 OCR Engine](https://github.com/tesseract-ocr/tesseract). It starts a Node.js server that passes file uploads through [img2pdf](https://gitlab.mister-muffin.de/josch/img2pdf) and/or [pdfsandwich](http://www.tobias-elze.de/pdfsandwich/) with the help of Redis queues.
 
-# Demo
-
-You can browse the mailocr website under http://ec2-34-227-113-227.compute-1.amazonaws.com:3000/ . The instructions to set up your own instance of the website follow below.
-
 # Setup
 
 1. **First step: AWS setup**
